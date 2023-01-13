@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcService.Protos";
+
+// import "google/protobuf/timestamp.proto";
+import "google/protobuf/timestamp.proto";
+
+package stock;
+
+service StockTicker {
+  rpc GetStockStream(StockRequest) returns (stream StockResponse);
+}
+
+message StockRequest { }
+
+message StockResponse {
+  float value = 1;
+  google.protobuf.Timestamp timestamp = 2;
+}
