@@ -1,8 +1,7 @@
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
-using GrpcService.Protos;
 
-namespace GrpcService.Services;
+namespace Server.Services;
 
 public sealed class StockService : StockTicker.StockTickerBase
 {
@@ -19,7 +18,7 @@ public sealed class StockService : StockTicker.StockTickerBase
 
         while (true)
         {
-            var value = (float) rand.NextDouble();
+            var value = (float)rand.NextDouble();
             value = value * 100.0f / 2;
 
             if (context.CancellationToken.IsCancellationRequested)

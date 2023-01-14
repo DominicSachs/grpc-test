@@ -1,6 +1,6 @@
-using GrpcService.Services;
+using Server.Services;
 
-namespace GrpcService;
+namespace Server;
 
 public sealed class Program
 {

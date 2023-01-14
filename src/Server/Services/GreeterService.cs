@@ -1,6 +1,6 @@
 using Grpc.Core;
 
-namespace GrpcService.Services;
+namespace Server.Services;
 
 public sealed class GreeterService : Greeter.GreeterBase
 {
